@@ -1,0 +1,3 @@
+CREATE USER batman WITH PASSWORD 'secret123';
+CREATE DATABASE scheduler_db;
+GRANT ALL PRIVILEGES ON DATABASE scheduler_db TO batman;

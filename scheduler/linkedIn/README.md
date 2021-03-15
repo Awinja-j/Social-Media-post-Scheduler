@@ -1,34 +1,9 @@
-# My Social Media Post Scheduler
+# How  to set up LinkedIn
 
-Because I am lazy bum!
+In order to create applications on LinkedIn, you need to create a linkedIn developer account (here)[https://www.linkedin.com/developers/]
 
-Use case:
+You will be required to create an application and declare what exactly what the app will be doing (here)[https://www.linkedin.com/developers/apps/new]
 
-I am a developer circle community lead and I would like to automate posts rather than to post everyday. Of course there are tools that I can pay to use to perform this task, but we are in a pandemic and I want to save every cobo I can.
-Social media platforms supported:
-- LinkedIn
-- Facebook
-- Twitter
 
-Technologies used:
 
-- python/django
-- vue js
-- postgres db
-- Rabbit mq
-- docker
-
-hosted on:
-- AWS
-
-Live link:
-
-[coming_soon](www.coming_soon.com)
-
-How to Get setup:
-
-[Facebook]()
-
-[LinkedIn]()
-
-[Twitter]()
+# Endpoints

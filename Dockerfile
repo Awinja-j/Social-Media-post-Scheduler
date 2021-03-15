@@ -6,17 +6,15 @@ COPY . /scheduler
 
 WORKDIR /scheduler
 
-COPY mongo-init.js /docker-entrypoint-initdb.d/
-
-RUN apk add --no-cache gcc python3-dev musl-dev linux-headers
+RUN apk add --no-cache postgresql-dev gcc python3-dev musl-dev linux-headers
 
 RUN pip install django \
-    pip install pymongo \
-    pip install djongo \
     pip install requests \
     pip install urllib3 \
     pip install djangorestframework \
-    pip install django-cors-headers 
+    pip install django-cors-headers \
+    pip install psycopg2-binary \
+    pip install shortuuid
 
 CMD ["echo", "Hello"]
 

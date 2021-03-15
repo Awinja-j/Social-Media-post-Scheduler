@@ -87,14 +87,23 @@ WSGI_APPLICATION = 'scheduler.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
+
     'default': {
-        'ENGINE': os.environ.get('MONGODB_ENGINE'),
-        'NAME': os.environ.get('MONGO_INITDB_DATABASE'),
-        'HOST': os.environ.get('MONGODB_HOST'),
-        'USERNAME': os.environ.get('MONGO_INITDB_ROOT_USERNAME'),
-        'PASSWORD': os.environ.get('MONGO_INITDB_ROOT_PASSWORD'),
-        'ENFORCE_SCHEMA': os.environ.get('MONGODB_ENFORCE_SCHEMA'),
+
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+
+        'NAME': 'scheduler_db',
+
+        'USER': 'batman',
+
+        'PASSWORD': 'secret123',
+
+        'HOST': 'postgres',
+
+        'PORT': '5432',
+
     }
+
 }
 
 
