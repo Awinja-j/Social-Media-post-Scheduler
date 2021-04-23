@@ -5,5 +5,4 @@ In order to create applications on LinkedIn, you need to create a linkedIn devel
 You will be required to create an application and declare what exactly what the app will be doing (here)[https://www.linkedin.com/developers/apps/new]
 
 
-
 # Endpoints

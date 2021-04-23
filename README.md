@@ -25,12 +25,14 @@ Technologies used:
 
 hosted on:
 - AWS
-
+    
 Live link:
 
 [coming_soon](www.coming_soon.com)
 
 How to Get setup:
+
+[localhost/ubuntu server]()
 
 [Facebook]()
 

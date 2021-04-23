@@ -1,34 +1,13 @@
-# My Social Media Post Scheduler
+## How to get access to the Twitter API
 
-Because I am lazy bum!
+### Step one: Apply and receive approval for a developer account
 
-Use case:
+To make any request to the Twitter API, you must first apply for a developer account and have your use case approved.
 
-I am a developer circle community lead and I would like to automate posts rather than to post everyday. Of course there are tools that I can pay to use to perform this task, but we are in a pandemic and I want to save every cobo I can.
-Social media platforms supported:
-- LinkedIn
-- Facebook
-- Twitter
+Standard - The default product track for most developers, including those building something for fun, for a good cause, to learn or teach. All approved developers will be able to create and use a Standard Project.
 
-Technologies used:
+### Step two: Save your App's key and tokens and keep them secure
 
-- python/django
-- vue js
-- postgres db
-- Rabbit mq
-- docker
+### Step three: Set up your access
 
-hosted on:
-- AWS
-
-Live link:
-
-[coming_soon](www.coming_soon.com)
-
-How to Get setup:
-
-[Facebook]()
-
-[LinkedIn]()
-
-[Twitter]()
+### Step four: Make your first request
