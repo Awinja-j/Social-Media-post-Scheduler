@@ -25,6 +25,9 @@ Technologies used:
 
 hosted on:
 - AWS
+
+System Design:
+
     
 Live link:
 
@@ -32,10 +35,10 @@ Live link:
 
 How to Get setup:
 
-[localhost/ubuntu server]()
+[localhost/ubuntu server](https://github.com/Awinja-j/Social-Media-post-Scheduler/blob/main/scheduler/posta/README.MD)
 
-[Facebook]()
+[Facebook](https://github.com/Awinja-j/Social-Media-post-Scheduler/blob/main/scheduler/facebook/README.md)
 
 [LinkedIn]()
 
-[Twitter]()
+[Twitter](https://github.com/Awinja-j/Social-Media-post-Scheduler/blob/main/scheduler/twitter/README.md)

@@ -14,7 +14,11 @@ RUN pip install django \
     pip install djangorestframework \
     pip install django-cors-headers \
     pip install psycopg2-binary \
-    pip install shortuuid
+    pip install shortuuid \
+    pip install djongo \
+    pip3 install django-redis \
+    pip install django-filter \
+    pip install markdown 
 
 CMD ["echo", "Hello"]
 

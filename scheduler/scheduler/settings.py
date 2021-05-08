@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'linkedIn',
     'twitter',
+    'user-auth',
 
 ]
 
@@ -56,6 +57,14 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
 ]
+
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
 
 CORS_ORIGIN_ALLOW_ALL = False
 CORS_ORIGIN_WHITELIST = (
@@ -87,12 +96,13 @@ WSGI_APPLICATION = 'scheduler.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
+    'default': {},
 
-    'default': {
+    'user_auth': {
 
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
 
-        'NAME': 'scheduler_db',
+        'NAME': 'users_db',
 
         'USER': 'batman',
 
@@ -101,6 +111,13 @@ DATABASES = {
         'HOST': 'postgres',
 
         'PORT': '5432',
+
+    },
+    'posts':{
+        'ENGINE': 'djongo',
+        'NAME': 'posts_db',
+        'MONGO_INITDB_ROOT_USERNAME': 'root',
+        'MONGO_INITDB_ROOT_PASSWORD':'pass12345',
 
     }
 
@@ -144,3 +161,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# caching
+
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379/1",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient"
+        }
+    }
+}
