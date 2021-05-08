@@ -18,8 +18,13 @@ RUN pip install django \
     pip install djongo \
     pip3 install django-redis \
     pip install django-filter \
-    pip install markdown 
+    pip install markdown \
+    pip install gunicorn \
+    pip install dj-database-url \
+    pip install whitenoise 
 
-CMD ["echo", "Hello"]
 
 COPY . .
+
+# Run the app.  CMD is required to run on Heroku            
+CMD gunicorn gettingstarted.wsgi --log-file -
