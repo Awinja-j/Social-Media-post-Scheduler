@@ -16,13 +16,13 @@ RUN pip install django \
     pip install psycopg2-binary \
     pip install shortuuid \
     pip install djongo \
-    pip3 install django-redis \
+    pip install django-redis \
     pip install django-filter \
     pip install markdown \
     pip install gunicorn \
     pip install dj-database-url \
-    pip install whitenoise 
-
+    pip install whitenoise \
+    pip install urllib3 
 
 COPY . .
 

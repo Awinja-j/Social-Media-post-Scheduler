@@ -36,12 +36,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'posta',
-    'facebook',
+    'post_scheduler',
+    'services.facebook',
     'corsheaders',
     'rest_framework',
-    'linkedIn',
-    'twitter',
+    'services.linkedIn',
+    'services.twitter',
     'user-auth',
 
 ]
@@ -62,7 +62,7 @@ REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+        'rest_framework.permissions.AllowAny'
     ]
 }
 
@@ -95,14 +95,16 @@ WSGI_APPLICATION = 'scheduler.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {},
+# DATABASE_ROUTERS =[]
 
-    'user_auth': {
+DATABASES = {
+    # 'default': {},
+
+    'default': {
 
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
 
-        'NAME': 'users_db',
+        'NAME': 'scheduler_db',
 
         'USER': 'batman',
 

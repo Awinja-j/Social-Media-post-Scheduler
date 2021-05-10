@@ -19,5 +19,10 @@ from django.conf.urls import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path(r'', include('posta.urls'))
+    path(r'', include('post_scheduler.urls')),
+    path('facebook/', include('services.facebook.urls')),
+    # path('linkedIn/', include('services.linkedIn.urls')),
+    # path('twitter/', include('services.twitter.urls')),
+    # path('auth/', include('user-auth.urls'))
+
 ]

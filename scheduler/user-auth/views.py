@@ -1,5 +1,5 @@
 from .models import Posts
-from rest_framework.decorators import api_view
+from rest_framework.views import APIView
 from rest_framework.response import Response
 from .serializers import PostsSerializer
 from django.http import HttpResponse
@@ -9,8 +9,8 @@ import os
 import http.client
 
     
-class UserAuth:
-    def __init__:
+class UserAuth(APIView):
+    def __init__(self):
         pass
 
     def auth_connect(self):

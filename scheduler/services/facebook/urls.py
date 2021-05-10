@@ -1,9 +1,11 @@
 from django.urls import path, include
+from rest_framework.urlpatterns import format_suffix_patterns
 
-from facebook_login import callback
+from .facebook_login import FacebookLoginFlow, FacebookCallback
 
 urlpatterns = [
-    path('', include(router.urls)),
-    path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
-    path('facebook/callback', include(callback))
+    path('login', FacebookLoginFlow.as_view()),
+    path('callback',FacebookCallback.as_view())
 ]
+
+urlpatterns = format_suffix_patterns(urlpatterns)
