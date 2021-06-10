@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class PostaConfig(AppConfig):
-    name = 'posta'
+class PostSchedulerConfig(AppConfig):
+    name = 'post_scheduler'

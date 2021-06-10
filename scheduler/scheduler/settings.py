@@ -37,13 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'post_scheduler',
-    'services.facebook',
     'corsheaders',
     'rest_framework',
     'services.linkedIn',
     'services.twitter',
-    'user-auth',
-
+    'services.facebook',
+    'user_auth',
 ]
 
 MIDDLEWARE = [
@@ -76,7 +75,7 @@ ROOT_URLCONF = 'scheduler.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -104,11 +103,11 @@ DATABASES = {
 
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
 
-        'NAME': 'scheduler_db',
+        'NAME': 'posta_user_db',
 
-        'USER': 'batman',
+        'USER': 'posta_admin',
 
-        'PASSWORD': 'secret123',
+        'PASSWORD': 'posta_admin123',
 
         'HOST': 'postgres',
 

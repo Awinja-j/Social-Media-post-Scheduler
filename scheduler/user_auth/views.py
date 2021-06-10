@@ -1,10 +1,8 @@
-from .models import Posts
 from rest_framework.views import APIView
+from django.views.generic import TemplateView
 from rest_framework.response import Response
-from .serializers import PostsSerializer
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404
-import shortuuid
 import os
 import http.client
 
@@ -47,3 +45,6 @@ class UserAuth(APIView):
     def forgot_password(self):
         pass
 
+
+class HomePageView(TemplateView):
+    template_name = 'home.html'

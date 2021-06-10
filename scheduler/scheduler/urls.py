@@ -20,9 +20,10 @@ from django.conf.urls import include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path(r'', include('post_scheduler.urls')),
-    path('facebook/', include('services.facebook.urls')),
-    # path('linkedIn/', include('services.linkedIn.urls')),
-    # path('twitter/', include('services.twitter.urls')),
-    # path('auth/', include('user-auth.urls'))
+    # path(r'', include('services.facebook.urls')),
+    # path(r'', include('services.linkedIn.urls')),
+    # path(r'', include('services.twitter.urls')),
+    path(r'', include('user_auth.urls')),
+    path('accounts/', include('django.contrib.auth.urls')),
 
 ]
