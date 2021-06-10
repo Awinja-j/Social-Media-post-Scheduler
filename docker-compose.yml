@@ -78,8 +78,6 @@ services:
     expose:
       - 6379
 
-  
-
 volumes:
   mongodb-data:
 
