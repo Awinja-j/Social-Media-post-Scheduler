@@ -10,6 +10,7 @@ RUN apk add --no-cache postgresql-dev gcc python3-dev musl-dev linux-headers
 
 RUN pip install django \
     pip install requests \
+    pip install requests-oauthlib \
     pip install urllib3 \
     pip install djangorestframework \
     pip install django-cors-headers \

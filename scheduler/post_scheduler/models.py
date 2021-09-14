@@ -11,6 +11,12 @@ class Posts(models.Model):
     datetime_to_publish=models.DateField()
 
     def __str__(self):
-        return self.photo_id
+        return self.post_id
 
 
+class Schedule(models.Model):
+    post_id = models.CharField(max_length=11, primary_key=True, null=False, default=None)
+    scheduled_id = models.CharField(max_length=11, primary_key=True, null=False, default=None)
+
+    def __str__(self):
+        return self.post_id

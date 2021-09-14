@@ -1,34 +1,32 @@
-## How to setup on your localhost:
+## The Scheduling Engine
 
-System Requirements:
-- DOCKER: 
+### How is works
 
-Here's how to set up docker in your device
+It uses the python package `schedule` 
 
-[Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
 
-[Mac both intel chip and Apple chip](https://docs.docker.com/docker-for-mac/install/)
+[schedule](https://pypi.org/project/schedule/) is an in-process scheduler for periodic jobs that uses the builder pattern for configuration. Schedule lets you run Python functions (or any other callable) periodically at predetermined intervals using a simple, human-friendly syntax.
 
-[Windows](https://docs.docker.com/docker-for-windows/install/)
+Each Schedule is setup when a new post is added to the system.
 
-- Python
 
-Installation:
+### Parameters:
 
-Clone this repo using htts or ssh, depending on your preference.
+- Time
+- Function to call
 
-ssh:
+### Returns:
 
-`$ git clone git@github.com:Awinja-j/Social-Media-post-Scheduler.git`
+- Status text
+- Status code
 
-https:
+### Attributes:
 
-`$ git clone https://github.com/Awinja-j/Social-Media-post-Scheduler.git`
+- Twitter
+- Facebook
+- LinkedIn
 
-Installation:
+### Model:
 
-`docker-compose up`
-
-Endpoint:
-
-`0.0.0.0:8000`
+- PostId
+- scheduled_id
