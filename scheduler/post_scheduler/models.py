@@ -15,7 +15,7 @@ class Posts(models.Model):
 
 
 class Schedule(models.Model):
-    post_id = models.CharField(max_length=11, primary_key=True, null=False, default=None)
+    post_id = models.CharField(max_length=11, null=False, default=None)
     scheduled_id = models.CharField(max_length=11, primary_key=True, null=False, default=None)
 
     def __str__(self):

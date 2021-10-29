@@ -18,16 +18,5 @@ class PostsSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         return Posts.objects.get_or_create(**validated_data)
 
-    def update(self, instance, validated_data):
-        instance.photo_id=validated_data.get('photo_id', instance.photo_id)
-        instance.photo_url= validated_data.get('photo_url', instance.photo_url)
-        instance.post_caption=validated_data.get('post_caption', instance.post_caption)
-        instance.is_published=validated_data.get('is_published', instance.is_published)
-        instance.is_twitter=validated_data.get('is_twitter', instance.is_twitter)
-        instance.is_facebook=validated_data.get('is_facebook', instance.is_facebook)
-        instance.is_linkedin=validated_data.get('is_linkedin', instance.is_linkedin)
-        instance.datetime_to_publish=validated_data.get('datetime_to_publish', instance.datetime_to_publish)
-        instance.save()
-        return instance
    
 

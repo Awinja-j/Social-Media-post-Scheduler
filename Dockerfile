@@ -23,7 +23,8 @@ RUN pip install django \
     pip install gunicorn \
     pip install dj-database-url \
     pip install whitenoise \
-    pip install urllib3 
+    pip install urllib3 \
+    pip install schedule
 
 COPY . .
 

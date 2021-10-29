@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'services.twitter',
     'services.facebook',
     'user_auth',
+    'policy',
 ]
 
 MIDDLEWARE = [

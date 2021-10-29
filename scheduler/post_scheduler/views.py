@@ -5,6 +5,8 @@ from .serializers import PostsSerializer
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404
 import shortuuid
+import schedule
+import time
 
 ps=PostsSerializer()
 
@@ -82,3 +84,9 @@ def edit_post(request, pk):
     if serializer.is_valid(raise_exception=True):
         post_saved = serilaizer.save()
     return Response({"message": "Post updated succesfully"})
+
+def schedule_engine(time, function_to_call):
+    '''
+    This function utilizes the python schedule package to call functions when required
+    '''
+    pass

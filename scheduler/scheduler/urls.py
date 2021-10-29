@@ -20,6 +20,7 @@ from django.conf.urls import include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path(r'', include('post_scheduler.urls')),
+    path(r'', include('policy.urls')),
     # path(r'', include('services.facebook.urls')),
     # path(r'', include('services.linkedIn.urls')),
     # path(r'', include('services.twitter.urls')),
